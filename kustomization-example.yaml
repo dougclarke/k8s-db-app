@@ -1,0 +1,18 @@
+configMapGenerator:
+- name: app-config
+literals:
+- DB_HOST=wordpress-mysql
+- DB_USER=wordpress
+- DB_NAME=wordpress
+secretGenerator:
+- name: mysql-password
+literals:
+- password=
+- name: mysql-root-password
+literals:
+- password=
+resources:
+- mysql-deployment.yaml
+- wordpress-deployment.yaml
+- hpa.yaml
+- ingress.yaml
