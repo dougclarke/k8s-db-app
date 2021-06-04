@@ -13,7 +13,8 @@ Download the repository, configure a kustomization.yaml file and apply using kub
 You must set a user and root password for the MySQL server in kustomization.yaml.
 
     $ git clone https://github.com/dougclarke/k8s-db-app.git
-    $ cp kustomization-example.yaml kustomization.yaml
+    $ cd k8s-db-app
+    $ mv kustomization-example.yaml kustomization.yaml
     $ vi kustomization.yaml
     $ kubectl apply -k ./
 
